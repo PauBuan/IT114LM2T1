@@ -6,6 +6,7 @@
 <html>
 <head>
     <title>Malayan Music Player</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
     <h1>Malayan Music Player</h1>
@@ -13,18 +14,25 @@
     <form runat="server">
         <%-- TODO 2.1 Create a label displaying the name of your favorite song and its artist (e.g. Yesterday - The Beatles)--%>
         <%-- Hint: https://www.tutorialspoint.com/asp.net/asp.net_custom_controls.htm#:~:text=Label --%>
+        <asp:Label runat="server" Text="Babaero by Hev Abi"></asp:Label><br/>
 
         <%-- TODO 2.2 Create an image that is 200px by 200x big showing the album cover of your favorite song. Make sure to set the alternative text. --%>
         <%-- Hint: https://www.tutorialspoint.com/asp.net/asp.net_basic_controls.htm#:~:text=Image%20Control --%>
+        <asp:Image runat="server" ImageUrl="deo.jpg" Width="200px" Height="200px" runat="server" AlternateText="Album Cover" /><br/>
 
         <%-- TODO 2.3 Create three buttons with texts. "Prev", "Play", and "Next" --%>
         <%-- Hint: https://www.tutorialspoint.com/asp.net/asp.net_basic_controls.htm#:~:text=Button%20Controls --%>
+        <asp:Button runat="server" Text="Prev" />
+        <asp:Button runat="server" Text="Play" onclick="Play" />
+        <asp:Button runat="server" Text="Next"/>
 
         <%-- TODO 2.4 Create a span. Once the play button is pressed, the span should display "Now playing <favorite song>" --%>
-        <%-- Hint: https://www.tutorialspoint.com/asp.net/asp.net_event_handling.htm#:~:text=onclick=%22btnclick_Click%22 --%>
+        <%-- Hint: https://www.tutorialspoint.com/asp.net/asp.net_first_example.htm#:~:text=convertoupper --%>
+        <span runat="server" id="span"/><br/>
 
         <%-- TODO 2.5 Display the current time using the template syntax <%= %> --%>
-        <%-- Hint: https://learn.microsoft.com/en-us/troubleshoot/developer/webapps/aspnet/development/inline-expressions#:~:text=displays%20the%20current%20time --%>
+        <%=DateTime.Now%>
     </form>
 </body>
 </html>
+
